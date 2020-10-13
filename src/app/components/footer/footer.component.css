@@ -1,0 +1,152 @@
+.white_fonts p,
+.white_fonts h1,
+.white_fonts h2,
+.white_fonts h3,
+.white_fonts h4,
+.white_fonts h5,
+.white_fonts h6,
+.white_fonts ul,
+.white_fonts ul li,
+.white_fonts ul li a,
+.white_fonts ul i,
+.white_fonts .post_info i,
+.white_fonts div,
+.white_fonts a.read_more {
+	color: #fff !important;
+}
+
+.white_fonts h3 {
+    font-size: 18px;
+}
+
+.white_fonts ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.social_icon li a {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    float: left;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+ul.social_icon li i {
+	color: #000 !important;
+	line-height: 35px;
+}
+
+ul.social_icon li {
+	float: left;
+	margin-right: 3%;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    transition: all .3s ease 0s;
+    color: #efefef!important;
+    text-align: left;
+}
+
+.footer-title h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-title h2 em {
+    color: #000 !important;
+    background-color: #efefef !important;
+    font-style: normal;
+    padding: 0px 10px;
+}
+
+.footer-box {
+    background: #000;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-box .footer-company-name {
+	text-align: center;
+	margin: 0px;
+	color: #333;
+	font-size: 13px;
+	font-weight: 400;
+	padding-top: 2px;
+}
+
+.footer-box .footer-company-name a {
+	color: #333;
+	text-decoration: underline !important;
+}
+
+.footer-box .footer-company-name a:hover {
+	color: #e91327;
+}
+
+.bottom_menu {
+    float: right;
+}
+
+.margin-bottom_30 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+ul.bottom_menu li {
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+ul.bottom_menu li a {
+    color: #8d8d8c;
+}
+
+.footer_bottom p.crp {
+    float: left;
+    margin: 0;
+    color: #8d8d8c;
+    font-size: 15px;
+}
+
+.footer_bottom {
+    background: #191919;
+    padding: 15px 0;
+}
+
+.footer_bottom p.crp {
+	float: left;
+	margin: 0;
+	color: #8d8d8c;
+	font-size: 15px;
+}
+
+.footer_menu {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+.footer_menu ul {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+
+.footer_menu li a {
+    font-size: 14px;
+    font-weight: 300 !important;
+    color: #acaba9 !important;
+}
+
+.footer_menu h3 {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,37 @@
+.touch-button {
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 0;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.w-button {
+  width: 200px;
+  margin-right: 0px;
+  margin-top: 28px;
+  background-color: #000;
+  color: white !important;
+  padding: 9px 15px;
+}
+
+.t-button {
+  margin-right: 0px;
+  color: #efefef !important;
+  background-color: #000 !important;
+  padding: 9px 15px;
+}
+
+.background-header .navbar .navbar-nav .nav-item .t-button{
+  color: #000 !important;
+  background-color: #efefef !important;
+}
+
+.background-header .navbar .navbar-brand h2 em {
+  color: #000 !important;
+  background-color: #efefef !important;
+}
