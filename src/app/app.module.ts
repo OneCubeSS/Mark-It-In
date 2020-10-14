@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{useClass: HashLocationStrategy, provide: LocationStrategy}],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
