@@ -14,7 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
-import { APP_BASE_HREF } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,8 +35,7 @@ import { APP_BASE_HREF } from '@angular/common';
     BrowserModule,
     AppRoutingModule
   ],
-  // providers: [{useClass: HashLocationStrategy, provide: LocationStrategy}],
-  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+  providers: [{useClass: HashLocationStrategy, provide: LocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
