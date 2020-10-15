@@ -67,6 +67,9 @@
     font-size: 40px;
     line-height: 50px;
   }
+  .grid {
+    min-height: 850px !important;
+  }
 }
 
 .FirstView {
@@ -511,6 +514,7 @@ p.count-text {
   align-items: stretch;
   position: unset !important;
   height: 350px !important;
+  min-height: 350px;
   padding-top: 40px;
   padding-bottom: 20px;
 }

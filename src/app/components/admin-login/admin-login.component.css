@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+  .pad-cont {
+    padding: 0% 0% 0% 0% !important;
+  } 
+}
+
 .pad-cont {
   width: 100%;
   padding: 0% 30% 0% 30%;
