@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
   showToggle: boolean;
+  ipInformation: any = {};
 
-  constructor() { }
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-
+    this.getIpInformation();
   }
 
   checkValue(event: any){
@@ -26,5 +28,13 @@ export class HomeComponent implements OnInit {
       off.style.display = "flex";
       on.style.display = "none";
     }
+ }
+
+ getIpInformation() {
+  this.apiService.getIpInformation()
+    .subscribe(data => {
+      this.ipInformation = data;
+      console.log(this.ipInformation);
+    });
  }
 }
