@@ -17,12 +17,17 @@ import { HomeComponent } from './components/home/home.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogCreateComponent } from './components/blog-create/blog-create.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { MatContenteditableModule } from 'mat-contenteditable';
 
 @NgModule({
   declarations: [
@@ -48,10 +53,24 @@ import { BlogCreateComponent } from './components/blog-create/blog-create.compon
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatTableModule,
+    MatIconModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CKEditorModule,
+    MatContenteditableModule
   ],
-  providers: [{useClass: HashLocationStrategy, provide: LocationStrategy}],
+  providers: [
+    {
+      useClass: HashLocationStrategy, 
+      provide: LocationStrategy
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -32,6 +32,9 @@
           <li class="nav-item touch">
             <a class="touch-button t-button">Get In Touch </a>
           </li>
+          <li class="nav-item pt-2" *ngIf="isLoggedIn()">
+            <a href="" class="out-btn p-2" (click)="doLogout()">LOG OUT</a>
+          </li>
         </ul>
       </div>
     </div>

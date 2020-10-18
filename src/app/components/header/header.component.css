@@ -35,3 +35,11 @@
   color: #000 !important;
   background-color: #efefef !important;
 }
+
+.out-btn {
+  background-color: #fff;
+  color: #000;
+  padding: 0px 10px;
+  font-size: 16px;
+  font-weight: 700;
+}

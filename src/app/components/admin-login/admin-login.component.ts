@@ -8,6 +8,7 @@ import { ApiService } from 'src/app/api.service';
   templateUrl: './admin-login.component.html',
   styleUrls: ['./admin-login.component.css']
 })
+
 export class AdminLoginComponent implements OnInit {
   loginForm: FormGroup;
   message: "";
@@ -37,7 +38,7 @@ export class AdminLoginComponent implements OnInit {
       this.apiService.login(this.loginForm.value).subscribe(result => {
         console.log("result: ", result);
         if (result.token) {
-          localStorage.setItem('token', result.token);
+          localStorage.setItem('access_token', result.token);
           this.router.navigate(['blogposts']);
         } else {
           this.message = result.message;

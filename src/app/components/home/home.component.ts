@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
+    localStorage.removeItem('access_token');
     this.getIpInformation();
   }
 
