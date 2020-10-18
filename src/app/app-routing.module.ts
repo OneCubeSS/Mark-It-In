@@ -12,8 +12,8 @@ import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'whatwedo', component: WhatwedoComponent },
-  { path: 'howwedo', component: HowwedoComponent },
+  { path: 'whatwedo', component: HomeComponent },
+  { path: 'howwedo', component: HomeComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'contactus', component: ContactusComponent },
   { path: 'casestudies', component: CasestudiesComponent },

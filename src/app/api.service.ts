@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const ipUrl = 'http://ip-api.com/json/';
+const ipUrl = 'https://ipapi.co/json/';
 
 @Injectable({
   providedIn: 'root'

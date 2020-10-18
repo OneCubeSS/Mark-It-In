@@ -12,6 +12,13 @@ export class CasestudiesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(!window.location.href.toString().endsWith("index.html")) {
+      let id = document.getElementById("headermain") as HTMLElement;
+      console.log("tag: ", id);
+      if(id.classList.length == 0) {   
+        id.classList.add("background-header");
+      }
+    }
   }
 
 }
