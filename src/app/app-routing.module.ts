@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { BlogCreateComponent } from './components/blog-create/blog-create.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CasestudiesComponent } from './components/casestudies/casestudies.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { HomeComponent } from './components/home/home.component';
-import { HowwedoComponent } from './components/howwedo/howwedo.component';
-import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
 
 
 const routes: Routes = [
@@ -18,7 +17,8 @@ const routes: Routes = [
   { path: 'contactus', component: ContactusComponent },
   { path: 'casestudies', component: CasestudiesComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'adminlogin', component: AdminLoginComponent }
+  { path: 'adminlogin', component: AdminLoginComponent },
+  { path: 'blogposts', component: BlogCreateComponent }
 ];
 
 @NgModule({

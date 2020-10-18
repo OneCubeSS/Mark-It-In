@@ -9,13 +9,6 @@
   padding: 0% 30% 0% 30%;
 }
 
-.text-label {
-  text-align: left;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 2% 5%;
-}
-
 .text-input {
   font-size: 16px;
   font-weight: 400;
@@ -43,4 +36,43 @@
   font-size: 18px;
   font-weight: 500;
   background-color: #000;
+}
+
+/* Material css */
+
+:host {
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+::ng-deep .mat-raised-button.mat-primary  {  
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+}
+
+::ng-deep .mat-form-field {
+  width: 100%;
+  min-width: 300px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #000;
+}
+
+.error {
+  color: red;
 }
