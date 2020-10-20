@@ -10,8 +10,8 @@
       Helping Start-ups & small businesses scale up digitally.<br />
     </p>
     <div class="ListUtilityButton AnimAppear1 appear">
-      <a href="/input/0" class="touch-button w-button">
-        Book Free Consultation</a
+      <a class="touch-button w-button"
+        (click)="openDialog('consultation')">Book Free Consultation</a
       >
     </div>
   </div>
@@ -175,10 +175,8 @@
 <!-- End What we Do -->
 
 <!-- Banner -->
-<div id="#bann" class="banner">
-  <a href="#">
-    <span class="">GET IN TOUCH</span>
-  </a>
+<div class="banner">
+  <a class="nav-link" (click)="openDialog('intouch')">GET IN TOUCH</a>
 </div>
 
 <!-- Our Services -->
@@ -240,11 +238,11 @@
               ></i>
             </div>
             <div class="ads-text wht">
-              <h3>Twitter Ads</h3>
+              <h3>Google Ads</h3>
             </div>
             <div class="ads-desc card-x-font">
               Target your potential consumers when they’re searching for a
-              prominent solution on google. <br />
+              prominent solution on Google. <br />
             </div>
           </div>
           <div class="back ads-back">
@@ -265,18 +263,18 @@
       <div class="cardBox flip-bck">
         <div class="card-a">
           <div class="front">
-            <div class="ads ads-google">
+            <div class="ads ads-link">
               <i
-                class="fa fa-twitter"
+                class="fa fa-linkedin"
                 style="color: #ffffff; margin: 15%; font-size: 45px"
               ></i>
             </div>
             <div class="ads-text wht">
-              <h3>Twitter Ads</h3>
+              <h3>LinkedIn Ads</h3>
             </div>
             <div class="ads-desc card-x-font">
               Target your potential consumers when they’re searching for a
-              prominent solution on google. <br />
+              prominent solution on LinkedIn. <br />
             </div>
           </div>
           <div class="back ads-back">
@@ -816,5 +814,90 @@
     </div>
   </div>
 </div>
+<!-- End Blog -->
 
-<!-- End Testimonials -->
+<!-- Recent Blog Posts -->
+<div class="latest-products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Contact US</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row pl-5">
+      <div class="col-md-12">
+        <div class="col-md-8">
+          <mat-dialog-content>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Full name </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Phone number </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Email Address </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Website URL </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Your Goal </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group rowdg">
+                <div class="col-md-5">
+                    <label class="label-text">Additional Details </label>
+                </div>
+                <div class="col-md-6">
+                    <textarea class="form-control" maxlength="60" rows="2"></textarea>              
+                </div>
+            </div>
+        </mat-dialog-content>
+        
+        <!-- <mat-dialog-content *ngIf="output">
+            <div class="rowdg">
+                <div class="col">
+                    <span *ngIf='success'>
+                        {{successResponse}}
+                    </span>
+                    <span *ngIf='failure'>
+                        {{failureResponse}}
+                    </span>
+                </div>
+            </div>
+        </mat-dialog-content> -->
+        
+        <mat-dialog-actions class="pb-4">
+            <button class="cbtn addcbtn">Submit</button> 
+        </mat-dialog-actions>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

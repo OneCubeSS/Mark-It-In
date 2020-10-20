@@ -1,1 +1,126 @@
-<p>dialogue-form works!</p>
+<mat-dialog-content *ngIf="inTouch">
+    <div class='title'>Get In Touch</div>
+    <hr>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Full name: </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Phone number </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Email Address </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Website URL </label>
+        </div>
+        <div class="col-md-6">
+            <input type="sex" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Your Goal: </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Additional Details </label>
+        </div>
+        <div class="col-md-6">
+            <textarea maxlength="60" rows="2"></textarea>  
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="!inTouch">
+    <div class='title'>Book Consultation</div>
+    <hr>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Full name: </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Phone number </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Email Address </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Website URL </label>
+        </div>
+        <div class="col-md-6">
+            <input type="sex" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Your Goal: </label>
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group rowdg">
+        <div class="col-md-5">
+            <label class="label-left">Additional Details </label>
+        </div>
+        <div class="col-md-6">
+            <textarea maxlength="60" rows="2"></textarea>              
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-content *ngIf="output">
+    <div class="rowdg">
+        <div class="col">
+            <span *ngIf='success'>
+                {{successResponse}}
+            </span>
+            <span *ngIf='failure'>
+                {{failureResponse}}
+            </span>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions class="pb-4">
+    <button class="cbtn addcbtn"
+        (click)="sendEmail()">Submit</button>
+
+    <button class="cbtn addcbtn"
+        (click)="close()">Close</button>
+</mat-dialog-actions>

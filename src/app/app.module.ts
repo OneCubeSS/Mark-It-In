@@ -28,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogCreateComponent } from './components/blog-create/blog-create.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { MatContenteditableModule } from 'mat-contenteditable';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
+    MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
     CKEditorModule,
