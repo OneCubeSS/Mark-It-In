@@ -240,7 +240,7 @@ header .navbar {
 	color: #efefef!important;
 }
 .background-header .navbar .navbar-nav a.nav-link {
-	color: #efefef!important;
+	color: #efefef;
 }
 .background-header .navbar .navbar-nav .nav-link:hover,
 .background-header .navbar .navbar-nav .active>.nav-link,
