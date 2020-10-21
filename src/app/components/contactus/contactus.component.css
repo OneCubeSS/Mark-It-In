@@ -1,0 +1,9 @@
+::ng-deep .mat-dialog-content {
+    max-height: 90vh;
+}
+
+@media (max-width: 767px) {
+.pad-btn {
+    padding-left: 40%;
+}
+}

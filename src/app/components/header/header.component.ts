@@ -25,6 +25,19 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  remove() {
+    let id = document.getElementById('navbarResponsive') as HTMLElement;
+    if (id.classList.contains('show')) {
+      id.classList.remove('show');
+    }
+  }
+
+  navigateToSection(section: string) {
+    this.remove();
+    window.location.hash = '';
+    window.location.hash = section;
+  }
+
   openDialog(type) {
     var params = {};
     params['type'] = type;

@@ -23,12 +23,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogCreateComponent } from './components/blog-create/blog-create.component';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { CKEditorModule } from 'ckeditor4-angular';
 import { MatContenteditableModule } from 'mat-contenteditable';
 import { MatDialogModule } from '@angular/material/dialog';
+import { PostAddComponent } from './components/blog-create/post-add/post-add.component';
+import { PostDetailComponent } from './components/blog-create/post-detail/post-detail.component';
+import { PostEditComponent } from './components/blog-create/post-edit/post-edit.component';
+import { BlogDataComponent } from './components/blog/blog-data/blog-data.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent,
     HomeComponent,
     AdminLoginComponent,
-    BlogCreateComponent
+    BlogCreateComponent,
+    PostAddComponent,
+    PostDetailComponent,
+    PostEditComponent,
+    BlogDataComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +69,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     ReactiveFormsModule,
     CKEditorModule,
-    MatContenteditableModule
+    MatContenteditableModule,
+    MatCardModule
   ],
   providers: [
     {

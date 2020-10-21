@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { DialogueFormComponent } from '../dialogue-form/dialogue-form.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Post } from '../blog-create/post';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +12,27 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 })
 export class HomeComponent implements OnInit {
   showToggle: boolean;
-  ipInformation: any = {};
+  ipInformation: any = {};  
+  data: Post[] = [];
+  isLoadingResults = true;
 
   constructor(private apiService: ApiService, private matDialog: MatDialog) {}
 
   ngOnInit(): void {
     localStorage.removeItem('access_token');
     this.getIpInformation();
+    this.apiService.getPosts().subscribe(
+      (res) => {
+        console.log('result: ', res);
+        this.data = res.data;
+        console.log(this.data);
+        this.isLoadingResults = false;
+      },
+      (err) => {
+        console.log('error: ', err);
+        this.isLoadingResults = false;
+      }
+    );
   }
 
   checkValue(event: any) {

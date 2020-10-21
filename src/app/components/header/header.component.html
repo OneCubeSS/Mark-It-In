@@ -18,19 +18,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#whatwedo">What's Mark-It In</a>
+            <a class="nav-link" (click)="remove()" href="#whatwedo">What's Mark-It In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#howwedo">How We Mark-It In</a>
+            <a class="nav-link" (click)="remove()" href="#howwedo">How We Mark-It In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/casestudies']">Case Studies</a>
+            <a class="nav-link" (click)="remove()" [routerLink]="['/casestudies']">Case Studies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/blog']">Blog</a>
+            <a class="nav-link" (click)="remove()" [routerLink]="['/blog']">Blog</a>
           </li>
           <li class="nav-item touch">
-            <a class="touch-button t-button" (click)="openDialog('intouch')">Get In Touch </a>
+            <a class="touch-button t-button" (click)="remove()" (click)="openDialog('intouch')">Get In Touch </a>
           </li>
           <li class="nav-item pt-2" *ngIf="isLoggedIn()">
             <a href="" class="out-btn p-2" (click)="doLogout()">LOG OUT</a>
