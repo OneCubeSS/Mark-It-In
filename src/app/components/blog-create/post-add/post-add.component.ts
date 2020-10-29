@@ -49,7 +49,10 @@ export class PostAddComponent implements OnInit {
     private formBuilder: FormBuilder
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    if(!this.isLoggedIn()) {
+      this.router.navigate(['adminlogin']);
+    } 
     this.postForm = this.formBuilder.group({
       category: [null, Validators.required],
       postTitle: [null, Validators.required],
@@ -59,6 +62,11 @@ export class PostAddComponent implements OnInit {
       postReference: [null, Validators.required],
       postImgUrl: [null, Validators.required],
     });
+  }
+
+  isLoggedIn(): boolean {
+    let authToken = localStorage.getItem('access_token');
+    return authToken !== null ? true : false;
   }
 
   onFormSubmit() {

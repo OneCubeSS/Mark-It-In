@@ -30,22 +30,15 @@
           <h2>Certificates</h2>
         </div>
       </div>
-      <div class="marquee">
-        <div class="track">
-          <div class="content">
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-            <img class="img1" src="assets/images/client-01.png" alt="1" />
-          </div>
-        </div>
-      </div>
+      <marquee behavior="scroll" direction="left" scrollamount="10" 
+      onmouseover="this.stop();" onmouseout="this.start();">
+        <img class="img1" src="assets/images/facebook.png" alt="1" />
+        <img class="img1" src="assets/images/google.png" width="120" height="80" alt="1" />
+        <img class="img1" src="assets/images/linkedin.png" width="120" height="80" alt="1" />
+        <img class="img1" src="assets/images/google.png" width="120" height="80" alt="1" />
+        <img class="img1" src="assets/images/facebook.png" width="120" height="80" alt="1" />
+        <img class="img1" src="assets/images/linkedin.png" width="120" height="80" alt="1" />
+      </marquee>
     </div>
   </div>
 </div>
@@ -173,11 +166,6 @@
   </div>
 </div>
 <!-- End What we Do -->
-
-<!-- Banner -->
-<div class="banner">
-  <a class="nav-link" (click)="openDialog('intouch')">GET IN TOUCH</a>
-</div>
 
 <!-- Our Services -->
 <div class="latest-products">
@@ -405,6 +393,13 @@
 <!-- end section -->
 <!-- End Proven -->
 
+<!-- Banner -->
+<div class="latest-products">
+<div class="banner">
+  <a class="nav-link" (click)="openDialog('intouch')">GET IN TOUCH</a>
+</div>
+</div>
+
 <!-- How we do -->
 <div id="howwedo" class="latest-products">
   <div class="container">
@@ -424,9 +419,6 @@
           builds meaningful relationships.
         </h5>
         <br />
-        <div>
-          <h5><a href="#">Read More >></a></h5>
-        </div>
       </div>
       <div class="col-md-6">
         <div class="client-item">
@@ -708,43 +700,39 @@
         <div id="demo" class="carousel slide" data-ride="carousel">
           <!-- The slideshow -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" *ngIf="checkdata(data1)">
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let data of data1;let i = index">
                   <div class="blog-tile">
                     <img
                       class="img-responsive p-2"
-                      src="assets/images/product_01.jpg"
-                      alt="#"
+                      src="{{data.postImgUrl}}" alt="{{data.postTitle}}"
                     />
                     <div class="p-3">
-                      <h4 class="pt-1 pb-1 proven-desc">Testing Management</h4>
+                      <h4 class="pt-1 pb-1 proven-desc">{{data.postTitle}}</h4>
                       <p class="pt-1 pb-1 blog-des">
-                        The approach that drives results & builds meaningful
-                        relationships. The approach that drives results & builds
-                        meaningful relationships. The approach that drives
-                        results & builds meaningful relationships.
+                        {{data.postDesc}}
                       </p>
                       <div class="blog-right">
                         <a href="#" class="ads-desc blk">Read More</a>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                </div>                
+              </div>
+            </div>
+            <div class="carousel-item" *ngIf="checkdata(data2)">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let data of data2;let i = index">
                   <div class="blog-tile">
                     <img
                       class="img-responsive p-2"
-                      src="assets/images/product_02.jpg"
-                      alt="#"
+                      src="{{data.postImgUrl}}" alt="{{data.postTitle}}"
                     />
                     <div class="p-3">
-                      <h4 class="pt-1 pb-1 proven-desc">Customer Management</h4>
+                      <h4 class="pt-1 pb-1 proven-desc">{{data.postTitle}}</h4>
                       <p class="pt-1 pb-1 blog-des">
-                        The approach that drives results & builds meaningful
-                        relationships. The approach that drives results & builds
-                        meaningful relationships. The approach that drives
-                        results & builds meaningful relationships.
+                        {{data.postDesc}}
                       </p>
                       <div class="blog-right">
                         <a href="#" class="ads-desc blk">Read More</a>
@@ -754,43 +742,18 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" *ngIf="checkdata(data3)">
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let data of data3;let i = index">
                   <div class="blog-tile">
                     <img
                       class="img-responsive p-2"
-                      src="assets/images/product_03.jpg"
-                      alt="#"
+                      src="{{data.postImgUrl}}" alt="{{data.postTitle}}"
                     />
                     <div class="p-3">
-                      <h4 class="pt-1 pb-1 proven-desc">Service Management</h4>
+                      <h4 class="pt-1 pb-1 proven-desc">{{data.postTitle}}</h4>
                       <p class="pt-1 pb-1 blog-des">
-                        The approach that drives results & builds meaningful
-                        relationships. The approach that drives results & builds
-                        meaningful relationships. The approach that drives
-                        results & builds meaningful relationships.
-                      </p>
-                      <div class="blog-right">
-                        <a href="#" class="ads-desc blk">Read More</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                  <div class="blog-tile">
-                    <img
-                      class="img-responsive p-2"
-                      src="assets/images/product_04.jpg"
-                      alt="#"
-                    />
-                    <div class="p-3">
-                      <h4 class="pt-1 pb-1 proven-desc">Product Management</h4>
-                      <p class="pt-1 pb-1 blog-des">
-                        The approach that drives results & builds meaningful
-                        relationships. The approach that drives results & builds
-                        meaningful relationships. The approach that drives
-                        results & builds meaningful relationships.
+                        {{data.postDesc}}
                       </p>
                       <div class="blog-right">
                         <a href="#" class="ads-desc blk">Read More</a>

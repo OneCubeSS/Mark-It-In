@@ -33,6 +33,10 @@ export class ApiService {
     return this.httpClient.get(baseApiUrl+'/blog/getPost/'+id);
   }
 
+  getRecentPosts(page: any): Observable<any> {
+    return this.httpClient.get(baseApiUrl+'/blog/getRecentPost/'+page);
+  }
+
   deletePost(id: any): Observable<any> {
     return this.httpClient.delete(baseApiUrl+'/blog/deletePost/'+id);
   }

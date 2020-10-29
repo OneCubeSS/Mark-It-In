@@ -22,8 +22,17 @@ export class AdminLoginComponent implements OnInit {
       if(id.classList.length == 0) {   
         id.classList.add("background-header");
       }
+    }    
+    if(!this.isLoggedIn()) {
+      this.initForm();
+    } else {
+      this.router.navigate(['blogposts']);
     }
-    this.initForm();
+  }
+
+  isLoggedIn(): boolean {
+    let authToken = localStorage.getItem('access_token');
+    return authToken !== null ? true : false;
   }
 
   initForm() {

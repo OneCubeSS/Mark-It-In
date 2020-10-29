@@ -50,9 +50,13 @@ export class PostEditComponent implements OnInit {
     private route: ActivatedRoute,
     private apiService: ApiService,
     private formBuilder: FormBuilder
-  ) {}
+  ) {
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    if(!this.isLoggedIn()) {
+      this.router.navigate(['adminlogin']);
+    } 
     //this.setEditorConfig();
     this.getPost(this.route.snapshot.params.id);
     this.postForm = this.formBuilder.group({
@@ -79,6 +83,11 @@ export class PostEditComponent implements OnInit {
         postImgUrl: res.data.postImgUrl,
       });
     });
+  }
+
+  isLoggedIn(): boolean {
+    let authToken = localStorage.getItem('access_token');
+    return authToken !== null ? true : false;
   }
 
   onFormSubmit() {

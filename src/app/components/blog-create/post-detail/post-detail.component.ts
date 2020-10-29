@@ -29,8 +29,16 @@ export class PostDetailComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    if(!this.isLoggedIn()) {
+      this.router.navigate(['adminLogin']);
+    } 
     this.getPostDetails(this.route.snapshot.params.id);
+  }
+
+  isLoggedIn(): boolean {
+    let authToken = localStorage.getItem('access_token');
+    return authToken !== null ? true : false;
   }
 
   getPostDetails(id: any) {

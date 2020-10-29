@@ -16,7 +16,7 @@
           *ngIf="isLoadingResults">
       <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
-    <div class="button-row">
+    <div class="button-row" style="padding-left: 20px;">
       <a mat-flat-button color="primary" [routerLink]="['add']"><mat-icon>add</mat-icon></a>
     </div>
     <div class="mat-elevation-z8">
@@ -25,13 +25,13 @@
   
         <!-- Post Name Column -->
         <ng-container matColumnDef="postTitle">
-          <th mat-header-cell *matHeaderCellDef>Post Title</th>
+          <th mat-header-cell *matHeaderCellDef class="header-post">Post Title</th>
           <td mat-cell *matCellDef="let row">{{row.postTitle}}</td>
         </ng-container>
   
         <!-- Post Description Column -->
         <ng-container matColumnDef="postDesc">
-          <th mat-header-cell *matHeaderCellDef>Post Description</th>
+          <th mat-header-cell *matHeaderCellDef class="header-post">Post Description</th>
           <td mat-cell *matCellDef="let row">{{row.postDesc}}</td>
         </ng-container>
   

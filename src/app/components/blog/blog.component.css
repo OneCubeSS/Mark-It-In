@@ -29,6 +29,8 @@ ul.blog-post li img {
   max-width: 100%;
   height: auto;
   margin: 0 0 10px;
+  height: 250px;
+  width: 100%;
 }
 
 ul.blog-post li h3 {
@@ -47,6 +49,7 @@ ul.blog-post li p {
   text-align: left !important;
   font-family: Open Sans, sans-serif;
   font-weight: 300;
+  min-height: 120px;
 }
 
 .button {

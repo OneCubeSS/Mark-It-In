@@ -13,19 +13,67 @@ import { Post } from '../blog-create/post';
 export class HomeComponent implements OnInit {
   showToggle: boolean;
   ipInformation: any = {};  
-  data: Post[] = [];
+  data1: Post[] = [];
+  data2: Post[] = [];
+  data3: Post[] = [];
   isLoadingResults = true;
+  fragment;
 
-  constructor(private apiService: ApiService, private matDialog: MatDialog) {}
+  constructor(private apiService: ApiService, private matDialog: MatDialog,
+    private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     localStorage.removeItem('access_token');
     this.getIpInformation();
-    this.apiService.getPosts().subscribe(
+    this.getRecentPost();
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
+
+  ngAfterViewChecked(): void {
+    try {
+        if(this.fragment) {
+            document.querySelector("#" + this.fragment).scrollIntoView();
+        }
+    } catch (e) { }
+  }
+
+  checkdata(data) {
+    if(data.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  getRecentPost() {
+    this.apiService.getRecentPosts(1).subscribe(
       (res) => {
         console.log('result: ', res);
-        this.data = res.data;
-        console.log(this.data);
+        this.data1 = res.data;
+        this.isLoadingResults = false;
+      },
+      (err) => {
+        console.log('error: ', err);
+        this.isLoadingResults = false;
+      }
+    );
+
+    this.apiService.getRecentPosts(2).subscribe(
+      (res) => {
+        console.log('result: ', res);
+        this.data2 = res.data;
+        this.isLoadingResults = false;
+      },
+      (err) => {
+        console.log('error: ', err);
+        this.isLoadingResults = false;
+      }
+    );
+
+    this.apiService.getRecentPosts(3).subscribe(
+      (res) => {
+        console.log('result: ', res);
+        this.data3 = res.data;
         this.isLoadingResults = false;
       },
       (err) => {
@@ -70,11 +118,5 @@ export class HomeComponent implements OnInit {
       dialogConfig.data.type = type;
     }
     dialogRef = this.matDialog.open(DialogueFormComponent, dialogConfig);
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result.event}`);
-    //   if (result && result.event == "success") {
-    //     //this.getEmployeeData();
-    //   }
-    // });
   }
 }
