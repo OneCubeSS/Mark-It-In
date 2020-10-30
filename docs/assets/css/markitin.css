@@ -414,7 +414,7 @@
   
   @media (min-width: 768px) {
     .FirstView_Banner {
-      background-image: url(../../../assets/images/Landing.png);
+      background-image: url(../images/Landing.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
