@@ -1,9 +1,22 @@
 ::ng-deep .mat-dialog-content {
-    max-height: 90vh;
+  max-height: 90vh;
 }
 
-@media (max-width: 767px) {
 .pad-btn {
+    padding-left: 20%;
+ }
+
+@media (max-width: 767px) {
+  .pad-btn {
     padding-left: 40%;
+  }
 }
+.alert {
+  color: red;
+}
+
+.btn-primary {
+  background-color: rgba(17, 7, 7, 0.925);
+  color: #fff;
+  border: 2px #000;
 }

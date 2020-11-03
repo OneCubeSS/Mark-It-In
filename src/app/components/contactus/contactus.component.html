@@ -11,13 +11,17 @@
       <div class="row pl-5">
         <div class="col-md-12">
           <div class="col-md-8">
-            <div>
+            <form [formGroup]="contactform" (ngSubmit)="submit()">
               <div class="form-group rowdg">
                   <div class="col-md-5">
                       <label class="label-text">Full name </label>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" formControlName="name">
+                  </div>
+                  <div *ngIf="f.name.touched && f.name.invalid" class="alert">
+                      <div *ngIf="f.name.errors.required">Name is required.</div>
+                      <div *ngIf="f.name.errors.minlength">Name should be 3 character.</div>
                   </div>
               </div>
               <div class="form-group rowdg">
@@ -25,7 +29,11 @@
                       <label class="label-text">Phone number </label>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" formControlName="number">
+                  </div>
+                  <div *ngIf="f.number.touched && f.number.invalid" class="alert">
+                      <div *ngIf="f.number.errors.required">Number is required.</div>
+                      <div *ngIf="f.number.errors.pattern">Invalid Phone number</div>
                   </div>
               </div>
               <div class="form-group rowdg">
@@ -33,7 +41,11 @@
                       <label class="label-text">Email Address </label>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" formControlName="email">
+                  </div>
+                  <div *ngIf="f.email.touched && f.email.invalid" class="alert">
+                    <div *ngIf="f.email.errors.required">Email is required.</div>
+                    <div *ngIf="f.email.errors.pattern">Invalid email.</div>
                   </div>
               </div>
               <div class="form-group rowdg">
@@ -41,7 +53,7 @@
                       <label class="label-text">Website URL </label>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" formControlName="website">
                   </div>
               </div>
               <div class="form-group rowdg">
@@ -49,7 +61,7 @@
                       <label class="label-text">Your Goal </label>
                   </div>
                   <div class="col-md-6">
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" formControlName="goal">
                   </div>
               </div>
               <div class="form-group rowdg">
@@ -57,29 +69,20 @@
                       <label class="label-text">Additional Details </label>
                   </div>
                   <div class="col-md-6">
-                      <textarea class="form-control" maxlength="60" rows="2"></textarea>              
+                      <textarea class="form-control" formControlName="more"></textarea>              
                   </div>
               </div>
-            </div>
-          
-          <!-- <mat-dialog-content *ngIf="output">
-              <div class="rowdg">
-                  <div class="col">
-                      <span *ngIf='success'>
-                          {{successResponse}}
-                      </span>
-                      <span *ngIf='failure'>
-                          {{failureResponse}}
-                      </span>
-                  </div>
+              
+              <div class="form-group pb-4 pad-btn">
+                  <button class="btn btn-primary" type="submit" [disabled]="checkBtn()">Submit</button>
               </div>
-          </mat-dialog-content> -->
-          
-          <div class="pb-4 pad-btn">
-              <button class="cbtn addcbtn">Submit</button> 
-          </div>
+            </form>
+            
+            <!-- <div class="pb-4 pad-btn">
+                <button class="cbtn addcbtn" [disable]="contactform.invalid" type="submit">Submit</button> 
+            </div> -->
           </div>
         </div>
       </div>
     </div>
-  </div>
+</div>

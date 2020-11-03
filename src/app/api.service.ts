@@ -48,4 +48,8 @@ export class ApiService {
   updatePost(id:any, post: Post): Observable<any> {
     return this.httpClient.put(baseApiUrl+'/blog/updatePost/'+id, post);
   }
+
+  sendContactMail(contact: any): Observable<any> {
+    return this.httpClient.post(baseApiUrl+'/mailer/sendmail', contact);
+  }
 }
