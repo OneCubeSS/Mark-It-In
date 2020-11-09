@@ -25,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogCreateComponent } from './components/blog-create/blog-create.component';
 import { CKEditorModule } from 'ckeditor4-angular';
@@ -66,6 +67,7 @@ import { BlogDataComponent } from './components/blog/blog-data/blog-data.compone
     MatTableModule,
     MatIconModule,
     MatDialogModule,
+    MatToolbarModule,
     FormsModule,
     ReactiveFormsModule,
     CKEditorModule,

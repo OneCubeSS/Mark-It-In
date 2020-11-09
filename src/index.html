@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>MarkItIn</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Site Icons -->
   <link rel="shortcut icon" href="#" type="image/x-icon" />
@@ -132,7 +132,12 @@
 			
 			function render(value) {
 				var formattedValue = settings.formatter.call(self, value, settings);
-				$self.html(formattedValue);
+				// $self.html(formattedValue + '%');
+				if($self[0].outerHTML.toString().includes('cost')) {
+					$self.html('$' + formattedValue);
+				} else {
+					$self.html(formattedValue + '%');
+				}
 			}
 		});
 	};

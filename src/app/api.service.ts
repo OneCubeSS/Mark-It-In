@@ -52,4 +52,8 @@ export class ApiService {
   sendContactMail(contact: any): Observable<any> {
     return this.httpClient.post(baseApiUrl+'/mailer/sendmail', contact);
   }
+
+  sendctaMail(cta: any): Observable<any> {
+    return this.httpClient.post(baseApiUrl+'/mailer/sendcta', cta);
+  }
 }

@@ -2,7 +2,11 @@
   color: #000;
   font-size: larger;
   font-weight: bold;
-  text-align: center;
+}
+
+button {
+  border: none !important;
+  border-radius: unset !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -15,14 +19,14 @@
 
   .mat-dialog-actions {
     justify-content: center;
-  }
+  } 
 }
 
 @media only screen and (min-width: 501px) and (max-width: 767px) {
   .cbtn {
     margin-left: 0 !important;
     margin-bottom: 0 !important;
-  }
+  } 
 }
 
 .rowdg {
@@ -76,4 +80,47 @@
   padding: 2px 10px;
   font-size: 16px;
   font-weight: 500;
+}
+
+::ng-deep .mat-form-field {
+  width: 380px;
+  padding: 2px 15px;
+}
+
+::ng-deep .mat-toolbar.mat-primary,
+::ng-deep .mat-raised-button.mat-primary {
+  background: #3c6fa5;
+}
+
+::ng-deep .mat-input-element {
+  caret-color: #3c6fa5;
+}
+
+::ng-deep .mat-dialog-container{
+  margin-top: 60px;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+::ng-deep .mat-dialog-actions {
+  justify-content: center;
+  margin-bottom: 20px !important;
+}
+
+::ng-deep .mat-dialog-content {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-height: 90vh;
+}
+
+.btn-primary {
+  background-color: #3c6fa5;
+  color: #fff;
+  border: 2px #000;
+}
+
+::ng-deep .mat-toolbar-row, .mat-toolbar-single-row {
+  padding-right: 35px;
+  padding-left: 5px;
 }
