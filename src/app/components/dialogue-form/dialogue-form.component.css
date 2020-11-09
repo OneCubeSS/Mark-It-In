@@ -89,11 +89,11 @@ button {
 
 ::ng-deep .mat-toolbar.mat-primary,
 ::ng-deep .mat-raised-button.mat-primary {
-  background: #3c6fa5;
+  background: #4891cd;
 }
 
 ::ng-deep .mat-input-element {
-  caret-color: #3c6fa5;
+  caret-color: #4891cd;
 }
 
 ::ng-deep .mat-dialog-container{
@@ -115,7 +115,7 @@ button {
 }
 
 .btn-primary {
-  background-color: #3c6fa5;
+  background-color: #4891cd;
   color: #fff;
   border: 2px #000;
 }

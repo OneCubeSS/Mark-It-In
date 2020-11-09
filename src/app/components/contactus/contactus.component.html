@@ -9,14 +9,14 @@
         </div>
       </div>
       <div class="row pl-1">
-        <div class="col-md-12">
-          <div class="col-md-8">
+        <div class="col-md-12" style="display: flex;">
+          <div class="col-md-6">
             <form [formGroup]="contactform" (ngSubmit)="submit()">
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Full name </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <input type="text" class="form-control" formControlName="name">
                   </div>
                   <div *ngIf="f.name.touched && f.name.invalid" class="alert">
@@ -25,10 +25,10 @@
                   </div>
               </div>
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Phone number </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <input type="text" class="form-control" formControlName="number">
                   </div>
                   <div *ngIf="f.number.touched && f.number.invalid" class="alert">
@@ -37,10 +37,10 @@
                   </div>
               </div>
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Email Address </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <input type="text" class="form-control" formControlName="email">
                   </div>
                   <div *ngIf="f.email.touched && f.email.invalid" class="alert">
@@ -49,26 +49,26 @@
                   </div>
               </div>
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Website URL </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <input type="text" class="form-control" formControlName="website">
                   </div>
               </div>
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Your Goal </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <input type="text" class="form-control" formControlName="goal">
                   </div>
               </div>
               <div class="form-group rowdg">
-                  <div class="col-md-5">
+                  <div class="col-md-10">
                       <label class="label-text">Additional Details </label>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                       <textarea class="form-control" formControlName="more"></textarea>              
                   </div>
               </div>
@@ -77,6 +77,8 @@
                   <button class="btn btn-primary" type="submit" [disabled]="checkBtn()">Submit</button>
               </div>
             </form>
+          </div>
+          <div class="col-md-6 img-us">
           </div>
         </div>
       </div>

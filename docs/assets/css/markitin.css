@@ -16,7 +16,7 @@
     max-width: 100px;
     margin: auto;
     box-sizing: border-box;
-    background-color: #3c6fa5;
+    background-color: #4891cd;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     color: #fff;
@@ -31,7 +31,7 @@
     height: 0px;
     position: absolute;
     border: 12px solid transparent;
-    border-top-color: #3c6fa5;
+    border-top-color: #4891cd;
     top: 5px;
   }
   .container-x .card-x .title:before {
@@ -394,7 +394,7 @@
     width: 200px;
     margin-right: 0px;
     margin-top: 28px;
-    background-color: #3c6fa5;
+    background-color: #4891cd;
     color: white !important;
     padding: 9px 15px;
   }
@@ -473,7 +473,7 @@
   .AnimAppear2.appear {
     opacity: 1;
     transform: translateX(0);
-    color: #3c6fa5;
+    color: #4891cd;
   }
   
   .FirstView .Liner {
