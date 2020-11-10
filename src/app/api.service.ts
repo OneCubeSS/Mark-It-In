@@ -56,4 +56,12 @@ export class ApiService {
   sendctaMail(cta: any): Observable<any> {
     return this.httpClient.post(baseApiUrl+'/mailer/sendcta', cta);
   }
+
+  checkUser(id: any): Observable<any> {
+    return this.httpClient.get(baseApiUrl+'/admin/checkEmail/'+id);
+  }
+
+  sendPwd(id: any): Observable<any> {
+    return this.httpClient.get(baseApiUrl+'/admin/updatePassword/'+id);
+  }
 }

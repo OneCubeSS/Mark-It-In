@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="pad-cont">
-        <div class="service-item">
+        <div class="service-item" *ngIf="!lostpwd">
           <div class="icon">
             <i class="fa fa-user"></i>
             <div class="col-md-12 title-label">
@@ -40,9 +40,30 @@
               </div>
 
               <div class="text-right">
-                <a href="#">Lost your Password ?</a>
+                <a (click)="lost()" style="cursor: pointer;">Lost your Password ?</a>
               </div>
             </form>
+          </div>
+        </div>
+        <div class="service-item p-5" *ngIf="lostpwd">
+          <div class="row" *ngIf="!success">
+            <form [formGroup]="lostForm" (ngSubmit)="submitLost()">
+              <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput  class="text-input" type="email" formControlName="emailcheck"
+                (mouseout)="valMail()" (focusout)="valMail()" required>
+                <mat-error>
+                  <span *ngIf="!lostForm.get('emailcheck').valid && lostForm.get('emailcheck').touched && !lostForm.get('emailcheck').errors?.nomail">Please enter your email Address</span>
+                  <span *ngIf="lostForm.get('emailcheck').errors?.nomail"> Email doesn't exists</span>
+                </mat-error>
+              </mat-form-field>
+              <div class="pad-cont margin_top_20">
+                <button [disabled]="!lostForm.get('emailcheck').valid || lostForm.get('emailcheck').errors?.nomail" mat-raised-button color="primary">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+          <div *ngIf="success">
+            <h5> Password has been sent to the email address: <h4 style="color: blue;"><b>{{emailUser}}</b></h4></h5>
           </div>
         </div>
       </div>
