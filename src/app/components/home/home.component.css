@@ -3,3 +3,13 @@
     border-radius: 5px;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1);
 }
+
+.padding-img {
+    padding-left: 60px;
+}
+
+@media screen and (max-width: 480px) {
+    .padding-img {
+        padding-left: 2px;
+    }
+}
