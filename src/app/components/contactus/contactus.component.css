@@ -22,7 +22,7 @@
 }
 
 .img-us {
-  background-image: url(/assets/images/contact-us.png);  
+  background-image: url(../../../assets/images/contact-us.png);  
   height: 500px;
   width: 350px;
   background-size: cover;
