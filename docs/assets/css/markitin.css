@@ -57,7 +57,7 @@
   }
   
   .card-x-font {
-    font-weight: 400;
+    font-weight: 250;
   }
   /* end */
   
@@ -123,7 +123,6 @@
   .grid-ul {
     text-align: left;
     font-size: 18px;
-    font-weight: 500;
     list-style: square;
     padding: 5% 10% 2% 10%;
     line-height: 2;
@@ -183,7 +182,7 @@
   }
   
   /* only small tablets */
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
    .carousel a.carousel-control-prev {
       left: 20px;
     }
@@ -193,6 +192,19 @@
     #demo .img-responsive {
       width: 100%;
       margin-bottom: 30px;
+    }
+
+    .grid {
+      min-height: 400px !important;
+    }
+  }
+
+  /* Iphone for Img */
+  @media only screen and (device-width: 320px) and (device-height: 568px) and 
+  (-webkit-device-pixel-ratio: 2) {
+    .app-img {
+      height: 230px !important;
+      width: 310px !important;
     }
   }
   
@@ -211,6 +223,22 @@
     #downcarousel .card-t .carousel-control-prev,
     #downcarousel .card-t .carousel-control-next {
       top: 102% !important;
+    }
+    .ads-desc {
+      font-weight: 300;
+    }
+
+    .m-before,
+    .m-after {
+      text-align: center !important;
+    }
+
+    .m-before {
+      padding-bottom: 10px;
+    }
+
+    .margin-top_30  {
+      margin-top: 10px !important;
     }
   }
   
@@ -449,7 +477,7 @@
       line-height: 50px;
     }
     .grid {
-      min-height: 1000px !important;
+      min-height: 1150px !important;
     }
   }
   
@@ -478,8 +506,8 @@
   }
   
   .FirstView .Liner {
-    font-weight: 700;
-    letter-spacing: 0em;
+    font-weight: 800;
+    letter-spacing: 2px;
   }
   
   .AnimAppear2 {
@@ -542,11 +570,19 @@
   }
   
   .ads-desc {
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     color: #efefef;
     margin-bottom: 5%;
     margin-top: 2%;
+  }
+
+  .m-before {
+    text-align: right;
+  }
+
+  .m-after {
+    text-align: left;
   }
   
   .ads-google {
@@ -780,6 +816,8 @@
   /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
+    margin-bottom: 5px;
+    margin-top: -5px;
   }
   
   .slider.round:before {

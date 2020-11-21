@@ -20,6 +20,7 @@ img {
   height: 50px;
   margin-top: -3px;
   background-color: #efefef;
+  border-radius: 5px;
 }
 
 .white_fonts h3 {
@@ -177,6 +178,16 @@ ul.bottom_menu li a {
 
 .fa-facebook-f:before {
   padding: 0px 3px;
+}
+
+.fa-phone-square:before {
+  font-size: 26px;
+  transition: none;
+}
+
+.fa-envelope:before {
+  font-size: 24px;
+  transition: none;
 }
 
 .fa-twitter {

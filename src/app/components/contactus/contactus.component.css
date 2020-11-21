@@ -23,9 +23,15 @@
 
 .img-us {
   background-image: url(../../../assets/images/contact-us.png);  
-  height: 500px;
+  height: 620px;
   width: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   top: 20px;
+}
+
+.label-text {
+  font-size: 18px;
+  /* color: #4891cd; */
+  font-weight: 500;
 }
