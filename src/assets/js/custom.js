@@ -20,18 +20,18 @@ jQuery( document ).ready(function( $ ) {
         
 
         $(window).scroll(function () {
-          var scroll = $(window).scrollTop();
-          var box = $(".header-text").height();
-          var header = $("header").height();
-
-          if (box != undefined) {
-            if (scroll >= box - header) {
-              $("header").addClass("background-header");
-            } else {
-              $("header").removeClass("background-header");
-            }
-          } 
-        });
+            var scroll = $(window).scrollTop();
+            var box = $(".header-text").height();
+            var header = $("header").height();
+  
+            if (box != undefined) {
+              if (scroll >= box - header) {
+                $("header").addClass("background-header"); 
+              } else {
+                $("header").removeClass("background-header");
+              }
+            } 
+          });
 
         if ($('.owl-clients').length) {
             $('.owl-clients').owlCarousel({

@@ -1,3 +1,11 @@
+.display-true {
+  display: block;
+}
+
+.display-false {
+  display: none;
+}
+
 /* Card Carousol */
 .container-x {
     display: flex;
