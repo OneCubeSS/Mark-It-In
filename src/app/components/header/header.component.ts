@@ -19,7 +19,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router, private matDialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getImg();
+  }
 
   isLoggedIn(): boolean {
     let authToken = localStorage.getItem('access_token');
@@ -35,7 +37,7 @@ export class HeaderComponent implements OnInit {
 
   getImg() {
     let id = document.getElementById('headermain') as HTMLElement
-    if (id.classList.contains('background-header')) {
+    if (id.classList.contains('background-header') || !window.location.href.toString().endsWith("index.html")) {
       this.imgValue = false;
     }
     else {
@@ -48,12 +50,6 @@ export class HeaderComponent implements OnInit {
     if (id.classList.contains('show')) {
       id.classList.remove('show');
     }
-  }
-
-  navigateToSection(section: string) {
-    this.remove();
-    window.location.hash = '';
-    window.location.hash = section;
   }
 
   openDialog(type) {

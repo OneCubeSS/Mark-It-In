@@ -14,9 +14,9 @@ import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'whatwedo', component: HomeComponent },
-  { path: 'howwedo', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full'},
+  // { path: 'whatwedo', component: HomeComponent },
+  // { path: 'howwedo', component: HomeComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'contactus', component: ContactusComponent },
   { path: 'casestudies', component: CasestudiesComponent },
@@ -30,7 +30,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+   imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled',
+    scrollPositionRestoration: 'enabled',
+    })],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

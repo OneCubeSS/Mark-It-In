@@ -30,11 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewChecked(): void {
-    try {
-        if(this.fragment) {
-            document.querySelector("#" + this.fragment).scrollIntoView();
-        }
-    } catch (e) { }
+    
   }
 
   checkdata(data) {
