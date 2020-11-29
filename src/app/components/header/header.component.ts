@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
 
   getImg() {
     let id = document.getElementById('headermain') as HTMLElement
-    if (id.classList.contains('background-header') || !window.location.href.toString().endsWith("index.html")) {
+    if (id.classList.contains('background-header') || window.location.href.toString().endsWith("whatwedo") || window.location.href.toString().endsWith("howwedo")) {
       this.imgValue = false;
     }
     else {
