@@ -662,6 +662,7 @@
   .card-a .front,
   .card-a .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     box-sizing: border-box;
     color: white;
     display: block;
