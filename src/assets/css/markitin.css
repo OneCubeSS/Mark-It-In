@@ -256,7 +256,7 @@
     border: none;
   }
   #downcarousel .card-t .carousel-item {
-    min-height: 420px;
+    min-height: 500px;
   }
   #downcarousel .card-t .carousel-caption {
     padding: 0;
@@ -265,7 +265,7 @@
     top: 15px;
     color: #3d3d3d;
     border: 1px solid #ccc;
-    min-height: 410px;
+    min-height: 470px;
     padding: 15px;
     background: linear-gradient(to right, #c5c7c9 0%, #b0ccd8 100%);
   }
@@ -308,7 +308,7 @@
     border-top: 1px solid #000;
   }
   #downcarousel .carousel-caption h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   #downcarousel .carousel-caption h2 span {
     color: #000;
@@ -322,12 +322,12 @@
   }
   
   #downcarousel .right-h {
-    font-weight: 600;
+    font-weight: 500;
     color: #000;
   }
   
   #downcarousel .right-des {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #000;
   }
@@ -652,6 +652,7 @@
     width: 100%;
     -webkit-animation: giro 1s 1;
     animation: giro 1s 1;
+    backface-visibility: hidden;
   }
   
   .card-a p {
