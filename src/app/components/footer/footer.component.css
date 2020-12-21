@@ -30,6 +30,7 @@ img {
   list-style: none;
   margin: 0px;
   padding: 0px;
+  text-align: left;
 }
 
 /* ul.social_icon li a {
@@ -114,25 +115,25 @@ ul.bottom_menu li {
 }
 
 ul.bottom_menu li a {
-  color: #fff;
+  color: #000;
 }
 
 .footer_bottom p.crp {
   float: left;
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: 15px;
 }
 
 .footer_bottom {
-  background: #3e5f7ac9;
-  padding: 15px 0;
+  background: #efefef;
+  padding: 10px 0;
 }
 
 .footer_bottom p.crp {
   float: left;
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: 15px;
 }
 
